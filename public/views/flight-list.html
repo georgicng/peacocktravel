@@ -1,0 +1,101 @@
+<main>
+    <div class="results-hero">
+        <div class="two-column-equal">
+            <dl>
+                <dt>Departure Date:</dt>
+                <dd>{{query.departure_date}}</dd>
+                <dt>Passengers</dt>
+                <dd>{{query.adults}}</dd>
+            </dl>
+            <dl>
+                <dt>Return Date</dt>
+                <dd>{{query.return_date}}</dd>
+                <dt>Class</dt>
+                <dd>{{query.travel_class}}</dd>
+            </dl>
+        </div>
+    </div>
+    <section ng-if="items.length > 0" class="booking-progress">
+        <div class="active">
+            <span>Flight Itinerary</span>
+            <div class="nodes-line">
+                <div class="node"></div>
+            </div>
+        </div>
+        <div>
+            <span>Passenger Details</span>
+            <div class="nodes-line">
+                <div class="node"></div>
+            </div>
+        </div>
+        <div>
+            <span>Payment Details</span>
+            <div class="nodes-line">
+                <div class="node"></div>
+            </div>
+        </div>
+    </section>
+    <header ng-if="items.length > 0" class="header-result">
+        <span>1</span>
+        <div class="arrow-right"></div>
+        <h1>Choose an Outbound Flight</h1>
+    </header>
+    <div ng-if="loading" class="loading" style="min-height: 300px">
+        <div style="background:url(./img/spinner.gif) no-repeat center center; margin: 100px 50px 50px; min-height:100px;"></div>
+        <p style="text-align: center; font-size: 25px; font-weight: 300; margin-bottom: 50px">Getting available flight Schedule...</p></div>
+    <div ng-if="error" class="empty" ><div style="background:url(./img/poi.gif) no-repeat center center; margin-top: 50px; margin-bottom: 20px; min-height:200px;"></div>
+            <p style="text-align: center; font-size: 50px; font-weight: 300; margin-bottom: 50px">No record found...</p></div>
+    <div ng-if="items.length > 0" class="row">
+        <div ng-repeat="n in items track by $index">
+            <section class="result-panel">
+                <header>
+                    <img class="carrier-logo" />
+                    <div>
+                        <h1>{{ n.itineraries[0].outbound.flights[0].marketing_airline}}</h1>
+                        <span class="flight-no">{{n.itineraries[0].outbound.flights[0].flight_number}}</span>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt>All passengers from</dt>
+                            <dd>{{n.fare.total_price}}</dd>
+                        </dl>
+                    </div>
+                </header>
+                <div class="cmt-row">
+                    <dl class="details">
+                        <dt class="sr-only">Departure</dt>
+                        <dd class="code">{{n.itineraries[0].outbound.flights[0].origin.airport}}</dd>
+                        <dd class="place">{{helper.getCity(n.itineraries[0].outbound.flights[0].origin.airport)}}</dd>
+                        <dd class="time">{{n.itineraries[0].outbound.flights[0].departs_at}}</dd>
+                    </dl>
+                    <dl class="duration">
+                        <dt class="sr-only">Layover</dt>
+                        <dd class="code">{{}}</dd>
+                        <div class="nodes">
+                            <div class="node-layover"></div>
+                        </div>
+                        <dd class="travel-time">{{}}</dd>
+                    </dl>
+                    <dl class="details">
+                        <dt class="sr-only">Arrival</dt>
+                        <dd class="code">{{n.itineraries[0].outbound.flights[0].destination.airport}}</dd>
+                        <dd class="place">{{}}</dd>
+                        <dd class="time">{{n.itineraries[0].outbound.flights[0].arrives_at}}</dd>
+                    </dl>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="cta">
+        <!--dl>
+        <dt>
+            Total Price
+            <span class="price-detail">for all passengers</span>
+        </dt>
+        <dd class="price">
+            268€
+        </dd>
+    </dl>
+    <button type="button" class="btn-large btn-fullwidth">Confirm</button-->
+    </footer>
+</main>

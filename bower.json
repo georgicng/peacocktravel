@@ -1,0 +1,9 @@
+{
+  "name": "peackcock-travel",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-moment": "^1.0.0"
+  }
+}

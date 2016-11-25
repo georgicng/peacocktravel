@@ -1,0 +1,39 @@
+<main>
+    <div class="contained-stretch">
+        <div class="hero">
+        </div>
+        <div ng-if="items.length > 0" class="btn-group-filters">
+            <button type="button">Stars</button>
+            <button type="button">Price</button>
+            <button type="button">Amenities</button>
+            <button type="button">Distance</button>
+        </div>
+        <div ng-if="loading" class="loading">
+            <div style="background:url(./img/spinner.gif) no-repeat center center; margin: 100px 50px 50px; min-height:100px;"></div>
+            <p style="text-align: center; font-size: 25px; font-weight: 300; margin-bottom: 50px">Getting hotels in the given location...</p>
+        </div>
+        <div ng-if="error" class="empty">
+            <div style="background:url(./img/poi.gif) no-repeat center center; margin-top: 50px; margin-bottom: 20px; min-height:200px;"></div>
+            <p style="text-align: center; font-size: 50px; font-weight: 300; margin-bottom: 50px">No record found...</p>
+        </div>
+        <div ng-if="items.length > 0" class="row">
+            <div ng-repeat="n in items track by $index">
+                <article class="hotel-result">
+                    <div class="hotel-image" style="background-image: url({{n.images[0].url}})">
+                        <!-- Background image used here -->
+                    </div>
+                    <div>
+                        <h1>{{n.property_name}}</h1>
+                        <span class="rating-{{n.awards[0].rating}}"></span>
+                        <span class="location">0.6 km to city center</span>
+                    </div>
+                    <div>
+                        <span>From</span>
+                        <span class="price">${{n.min_daily_rate.amount}}</span>
+                        <span>/&nbsp;night</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>

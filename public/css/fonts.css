@@ -1,0 +1,14 @@
+@import url(../../../../../fonts.googleapis.com/earlyaccess/notosanshebrew.css);
+@import url(../../../../../fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+body.Roboto,body.Roboto h1,body.Roboto h2,body.Roboto h3,body.Roboto h4,body.Roboto h5,body.Roboto h6{font-family:Roboto,checkmytrip}
+body.Arabic,body.Arabic h1,body.Arabic h2,body.Arabic h3,body.Arabic h4,body.Arabic h5,body.Arabic h6{font-family:'Noto Sans Kufi Arabic',checkmytrip}
+body.Nunito,body.Nunito h1,body.Nunito h2,body.Nunito h3,body.Nunito h4,body.Nunito h5,body.Nunito h6{font-family:Nunito,checkmytrip}
+body.Amadeus,body.Amadeus h1,body.Amadeus h2,body.Amadeus h3,body.Amadeus h4,body.Amadeus h5,body.Amadeus h6{font-family:Amadeus,checkmytrip}
+body.OpenSans,body.OpenSans h1,body.OpenSans h2,body.OpenSans h3,body.OpenSans h4,body.OpenSans h5,body.OpenSans h6{font-family:'Open Sans',checkmytrip}
+body.Hebrew,body.Hebrew h1,body.Hebrew h2,body.Hebrew h3,body.Hebrew h4,body.Hebrew h5,body.Hebrew h6{font-family:'Noto Sans Hebrew',checkmytrip}
+@font-face{font-family:Avenir;src:local('☺'),url(../fonts/avenir_medium.ttf) format('truetype');font-style:normal;font-weight:400}
+@font-face{font-family:Avenir;src:local('☺'),url(../fonts/avenir_heavy.ttf) format('truetype');font-style:normal;font-weight:700}
+@font-face{font-family:Avenir;src:local('☺'),url(../fonts/avenir_light.ttf) format('truetype');font-style:normal;font-weight:300}
+@font-face{font-family:Amadeus;src:url(../fonts/amadeus-bold-web.eot);src:url(../fonts/amadeus-bold-web.eot?#iefix) format('embedded-opentype'),url(../fonts/amadeus-bold-web.woff) format('woff'),url(../fonts/amadeus-bold-web.ttf) format('truetype'),url(../fonts/amadeus-bold-web.svg#amadeusbold) format('svg');font-weight:700;font-style:bold}
+@font-face{font-family:Amadeus;src:url(../fonts/amadeus-regular-web.eot);src:url(../fonts/amadeus-regular-web.eot?#iefix) format('embedded-opentype'),url(../fonts/amadeus-regular-web.woff) format('woff'),url(../fonts/amadeus-regular-web.ttf) format('truetype'),url(../fonts/amadeus-regular-web.svg#amadeusregular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:Amadeus;src:url(../fonts/amadeus-thin-web.eot);src:url(../fonts/amadeus-thin-web.eot?#iefix) format('embedded-opentype'),url(../fonts/amadeus-thin-web.woff) format('woff'),url(../fonts/amadeus-thin-web.ttf) format('truetype'),url(../fonts/amadeus-thin-web.svg#amadeusthin) format('svg');font-weight:300;font-style:normal}

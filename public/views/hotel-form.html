@@ -1,0 +1,100 @@
+<main>
+    <div class="contained-narrow">
+        <form id="booking-search-form">
+            <fieldset class="search-hotel" form="booking-search-form">
+                <label for="location">Destination / Hotel Name</label>
+                <span class="input-wrap vanilla">
+                    <input type="text" id="location" name="location" placeholder="Select Location" ng-model="hotel.location" ng-class="{'has-value': location}">
+                    <i class="icon-search-slim"></i>
+                </span>
+            </fieldset>
+            <fieldset class="search-dates" form="booking-search-form">
+                <div class="two-column-equal">
+                    <div>
+                        <label for="checkin-date">Check In</label>
+                        <div class="cmt-row" ng-click="showModal()">
+                            <i class="icon-calendar"></i>
+                            <input type="text" id="checkin-date" placeholder="Select"  ng-model="hotel.check_in">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="checkout-date">Check Out</label>
+                        <div class="cmt-row" ng-click="showModal()">
+                            <i class="icon-calendar"></i>
+                            <input type="text" id="checkout-date" placeholder="Select"  ng-model="hotel.check_out">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="search-dates" form="booking-search-form">
+                <div class="two-column-equal">
+                    <div>
+                        <label for="amount">Budget</label>
+                        <div class="cmt-row">
+                            <i class="icon-calendar"></i>
+                            <input type="text" id="amount" placeholder="Give your budget in USD" ng-model="hotel.max_rate">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="search-dates" form="booking-search-form">
+                <div class="two-column-equal">
+                    <div>
+                        <label for="amenities">Amenities</label>
+                        <div class="cmt-row">
+                            <i class="icon-calendar"></i>
+                            <input type="text" id="amenities" placeholder="List required ammenities" ng-model="hotel.amenities">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!--div class="drop-selector">
+    <span>Find hotels for my flights</span>
+</div>
+
+    <div class="contained-narrow-pad">
+        <article class="hotel-suggestion">
+    <div>
+        <h1>Melbourne</h1>
+        <span>8th June - 24th June</span>
+    </div>
+    <div>
+        <span>12 Nights</span>
+    </div>
+</article>
+<article class="hotel-suggestion">
+    <div>
+        <h1>Nice</h1>
+        <span>26th June - 30th June</span>
+    </div>
+    <div>
+        <span>4 nights</span>
+    </div>
+</article>
+
+        <article class="hotel-suggestion">
+    <div>
+        <h1>Melbourne</h1>
+        <span>8th June - 24th June</span>
+    </div>
+    <div>
+        <span>12 Nights</span>
+    </div>
+</article>
+<article class="hotel-suggestion">
+    <div>
+        <h1>Nice</h1>
+        <span>26th June - 30th June</span>
+    </div>
+    <div>
+        <span>4 nights</span>
+    </div>
+</article>
+
+    </div-->
+    <footer class="action">
+        <button type="submit" form="form_id_here" class="btn-large btn-fullwidth" ng-click="submit(hotel)">Search hotels</button>
+    </footer>
+</main>

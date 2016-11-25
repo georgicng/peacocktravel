@@ -1,0 +1,133 @@
+<main>
+    <div class="contained-narrow">
+        <div class="btn-set">
+    <button type="button">Round Trip</button>
+    <button type="button">One Way</button>
+    <button type="button">Multi City</button>
+</div>
+
+        <form id="booking-search-form">
+            <fieldset class="search-destination" form="booking-search-form" >
+    <div class="two-column-equal">
+        <div>
+            <label for="booking-depart">From</label>
+            <input type="search" id="booking-depart" class="code" name="booking-depart" maxlength="3" ng-model="flight.origin" ng-class="{'has-value': flight.origin}">
+            <span ng-if="flight.origin.length < 3">Select your Airport</span>
+            <span ng-if="flight.origin.length > 2">{{getAirport(flight.origin)}}</span>
+        </div>
+        <div>
+            <label for="booking-destination">To</label>
+            <input type="search" id="booking-destination" class="code" name="booking-destination" maxlength="3" ng-model="flight.destination" ng-class="{'has-value': flight.destination}">
+            <span ng-if="flight.destination.length < 3">Select your destination</span>
+            <span ng-if="flight.destination.length > 2">{{getAirport(flight.destination)}}</span>
+        </div>
+    </div>
+    <div class="nodes-line">
+        
+        <div class="node">
+            <i class="icon-flight"></i>
+            <i class="icon-flight"></i>
+        </div>
+        
+    </div>
+</fieldset>
+
+            <fieldset class="search-dates" form="booking-search-form">
+    <div class="two-column-equal">
+        <div>
+            <label for="depart-date">Departure Date</label>
+            
+            <div class="cmt-row" ng-click="showModal()">
+                <i class="icon-calendar"></i>
+                <input type="text" id="depart-date" placeholder="Select" ng-model="flight.departure_date">
+            </div>
+        </div>
+        <div>
+            <label for="return-date">Return Date</label>
+            <div class="cmt-row" ng-click="showModal()">
+                <i class="icon-calendar"></i>
+                <input type="text" id="return-date" placeholder="Select" ng-model="flight.return_date" >
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+            <fieldset class="search-passengers" form="booking-search-form">
+    <span>
+        <legend>Passengers</legend>
+    </span>
+    <!-- Legend must be in a span to fix all manner of positioning issues -->
+    <div class="cmt-row">
+        <label for="adults-counter">Adults
+            <span>+12 years</span>
+        </label>
+        <span class="input-counter ">
+    <button type="button" ng-click="adjustValue(-1,'adults')" title="minus"><i class="icon-minus"></i></button>
+    <input type="number" class="sr-only" id="adults-counter" value="1" ng-model="flight.adults">
+    <span ng-bind="flight.adults">1</span>
+    <button type="button" ng-click="adjustValue(1,'adults')" title="plus"><i class="icon-plus"></i></button>
+</span>
+
+    </div>
+    <div class="cmt-row">
+        <label for="children-counter">Children
+            <span>under 12 years</span>
+        </label>
+        <span class="input-counter ">
+    <button type="button" ng-click="adjustValue(-1,'children')" title="minus"><i class="icon-minus"></i></button>
+    <input type="number" class="sr-only" id="children-counter" value="0" ng-model="flight.children">
+    <span ng-bind="flight.children">0</span>
+    <button type="button" ng-click="adjustValue(1,'children')" title="plus"><i class="icon-plus"></i></button>
+</span>
+
+    </div>
+    <div class="cmt-row">
+        <label for="infants-counter">Infants
+            <span>under 2 years</span>
+        </label>
+        <span class="input-counter ">
+    <button type="button" ng-click="adjustValue(-1,'infants')" title="minus"><i class="icon-minus"></i></button>
+    <input type="number" class="sr-only" id="infants-counter" value="0" ng-model="flight.infants">
+    <span ng-bind="flight.infants">0</span>
+    <button type="button" ng-click="adjustValue(1,'infants')" title="plus"><i class="icon-plus"></i></button>
+</span>
+
+    </div>
+</fieldset>
+
+            <fieldset class="search-options" form="booking-search-form">
+    <div class="two-column-equal">
+        <div>
+            <label for="flight-class">Class</label>
+            <div class="cmt-row">
+                <span class="input-wrap vanilla">
+                    <select id="flight-class" title="Choose Class" ng-model="flight.travel_class">
+                        <option value="economy" selected="selected">Economy</option>
+                        <option value="premium">Premium Economy</option>
+                        <option value="premium">Very long test value Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First</option>
+                    </select>
+                    <i class="icon-select"></i>
+                </span>
+            </div>
+        </div>
+        <div>
+            <label for="direct-only">Direct Flights Only</label>
+            <div class="cmt-row">
+                <label class="toggle">
+                    <input type="checkbox" id="direct-only" ng-model="flight.nonstop">
+                    <div class="slide-toggle"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+        </form>
+    </div>
+    <footer class="action">
+    <button type="submit" form="form_id_here" class="btn-large btn-fullwidth" ng-click="submit(flight)">Search Flights</button>
+</footer>
+
+</main>

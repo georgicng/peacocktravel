@@ -1,0 +1,52 @@
+.example-mobile-header i,.example-mobile-header>h1{color:#fff;font-weight:700;text-transform:uppercase}
+.logo-variant{height:2.075em;max-height:2.075em;width:auto;max-width:70px;margin:-2em 0}
+.hero{background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.77) 100%),url(../img/demo/ARN.jpg)}
+.login-splash{background-image:linear-gradient(to bottom,rgba(2,20,96,.7) 0,rgba(0,0,0,0) 100%),url(../img/demo/app-bg.jpg)}
+.addin-weather{background-image:linear-gradient(to bottom,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.6) 100%),url(../img/demo/meteo.jpg)}
+.addin-citymap{background-image:url(http://www.portablebooking.com/checkmytrip/version102/assets/img/demo/city-map.svg)}
+.addin-hotel{background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.77) 100%),url(../img/demo/accomodation.jpg)}
+.addin-activity{background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.77) 100%),url(../img/demo/activity.jpg)}
+.addin-restaurant{background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.77) 100%),url(../img/demo/restaurant.jpg)}
+.addin-photo{background-image:linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.77) 100%),url(../img/demo/filename.jpg)}
+.addin-file{background-image:url(http://www.portablebooking.com/checkmytrip/version102/assets/img/demo/invoice-bg.svg)}
+.addin-cta{background-image:url(../img/demo/banner.jpg)}
+.timeline-module:nth-of-type(1) .timeline-card,.timeline-module:nth-of-type(1) .timeline-card::after{background-image:linear-gradient(to bottom,rgba(0,0,0,.4) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.4) 100%),url(../img/demo/newyork-bg.jpg)}
+.timeline-module:nth-of-type(2) .timeline-card,.timeline-module:nth-of-type(2) .timeline-card::after{background-image:linear-gradient(to bottom,rgba(0,0,0,.4) 0,rgba(0,0,0,0) 50%,rgba(0,0,0,.4) 100%),url(../img/demo/dubai-bg.jpg)}
+.timeline-bubble::after{background-image:url(../img/demo/bubble-bg.jpg)}
+.map::before{background-image:url(../img/demo/BCN-map.jpg)}
+.reco-photo:nth-child(1){background-image:url(../img/demo/accomodation.jpg)}
+.reco-photo:nth-child(2){background-image:url(../img/demo/accomodation-2.jpg)}
+.reco-photo:nth-child(3){background-image:url(../img/demo/accomodation-3.jpg)}
+.weather{background-image:linear-gradient(to bottom,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.6) 100%),url(../img/demo/BCN-meteo.jpg)}
+.booking-hero-area{background-image:url(../img/demo/app-bg.jpg)}
+.hotel-image{background-image:url(../img/demo/accomodation.jpg)}
+.results-hero,.results-hero-payment{background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(../img/demo/ARN.jpg)}
+.map a:nth-of-type(1){top:25%;left:25%}
+.map a:nth-of-type(2){top:50%;left:80%}
+.map a:nth-of-type(3){top:85%;left:50%}
+.map a:nth-of-type(4){top:25%;left:80%}
+.map a:nth-of-type(5){top:95%;left:15%}
+.example-mobile-header{font-size:16px;padding:0 3%;display:flex;align-items:center;justify-content:space-around;height:44px;background-color:#2475ac;z-index:1}
+.example-mobile-header>div,.example-mobile-header>h1{width:33.333%;height:100%;flex:none;display:flex;align-items:center}
+.example-mobile-header>h1{font-size:1em;justify-content:center}
+.example-mobile-header .icon-more-dots{font-size:2em}
+.example-mobile-header>div:first-child{justify-content:flex-start}
+.example-mobile-header>div:last-child{justify-content:flex-end}
+.example-mobile-footer{font-size:16px;padding:0 1em;width:100%;height:50px;background-color:#fff}
+.example-mobile-footer nav ul{justify-content:space-between;display:flex;flex-direction:row;align-items:center;align-items:flex-end;padding-bottom:.25em;height:50px;flex-shrink:0}
+.example-mobile-footer nav ul li{font-size:.75em;font-weight:300;text-transform:none;text-align:center;padding:0;border:0}
+.example-mobile-footer nav ul li a{justify-content:flex-start;display:flex;flex-direction:column;align-items:stretch;line-height:1}
+.example-mobile-footer nav ul li a::before{content:' ';display:block;font-size:2.1em}
+.example-mobile-footer nav ul li a.timeline::before{content:"\e94c"}
+.example-mobile-footer nav ul li a.booking::before{content:"\e942"}
+.example-mobile-footer nav ul li a.settings::before{content:"\e946"}
+.example-mobile-footer nav ul li a,.example-mobile-footer nav ul li a:active,.example-mobile-footer nav ul li a:hover,.example-mobile-footer nav ul li a:link,.example-mobile-footer nav ul li a:visited{color:#787875}
+.example-mobile-footer nav ul li a.active,.example-mobile-footer nav ul li a:active.active,.example-mobile-footer nav ul li a:hover.active,.example-mobile-footer nav ul li a:link.active,.example-mobile-footer nav ul li a:visited.active{color:#2475ac}
+#menu-toggle{position:relative;margin-right:6%}
+#menu-toggle::after{top:100%;left:50%;margin-top:0;margin-left:-8.1px;border-top:0;border-right:8.1px transparent;border-bottom:8.1px transparent;border-left:8.1px transparent;content:' ';display:block;line-height:0;position:absolute;z-index:2000;width:0;height:0;pointer-events:none;border-style:solid;background:0 0;transition:all .3s ease-in-out}
+#menu-toggle.is-open::after{border-bottom-color:#fff}
+[class*=contained].demo{background-color:#444;border:1px solid #222;border-radius:10px;overflow:hidden;flex-grow:1;height:100%;min-height:100px}
+[class*=contained].demo+.demo{margin-top:2px}
+[class*=contained].demo .sg-inner{width:100%;flex:auto;display:flex;align-items:center;justify-content:center;background-color:#aaa}
+@media screen and (min-width:769px){.example-mobile-footer,.example-mobile-header{display:none}
+}
